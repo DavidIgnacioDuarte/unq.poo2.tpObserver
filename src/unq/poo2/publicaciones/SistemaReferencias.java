@@ -18,10 +18,10 @@ public class SistemaReferencias {
 	
 	public void agregarArticulo(ArticuloCientifico nuevoArticulo) {
 		this.articulos.add(nuevoArticulo);
-		this.update(nuevoArticulo);
+		this.notify(nuevoArticulo);
 	}
 	
-	private void update(ArticuloCientifico nuevoArticulo) {
+	private void notify(ArticuloCientifico nuevoArticulo) {
 		for (Sensor sensor : this.sensores) {
 			sensor.notify(nuevoArticulo);
 		}
